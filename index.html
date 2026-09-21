@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Boda | Sofía & Alejandro</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="invitacion.css">
+</head>
+<body>
+
+    <!-- Encabezado / Cover -->
+    <header class="invitation-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="subtitle">Nos casamos</p>
+            <h1 class="names">Diego & Alma</h1>
+            <p class="date-badge">18 · OCTUBRE · 2026</p>
+        </div>
+    </header>
+
+    <!-- Foto Principal de la Pareja -->
+    <section class="couple-photo-section">
+        <div class="photo-frame">
+            <img src="novios.jpg.jpeg" alt="Sofía y Alejandro" class="couple-img">
+        </div>
+    </section>
+
+    <!-- Nuestra Historia -->
+    <section class="story-section">
+        <h2 class="section-title">Nuestra Historia</h2>
+        <div class="divider">✦</div>
+        <p class="story-text">
+            Nos conocimos un atardecer de otoño en una pequeña cafetería. Lo que comenzó como una conversación espontánea sobre libros y café, pronto se convirtió en incontables tardes de risas, viajes imprevistos y un amor que creció día a día. Hoy, con mucha ilusión, queremos dar el siguiente paso y celebrar con ustedes el inicio de nuestro "para siempre".
+        </p>
+    </section>
+
+    <!-- Eventos (Tarjetas Dinámicas Flip 180°) -->
+    <section class="events-section">
+        <h2 class="section-title">Dónde & Cuándo</h2>
+        <p class="flip-hint">Toca o pasa el cursor sobre las tarjetas para ver los detalles</p>
+        <div class="divider">✦</div>
+
+        <div class="events-grid">
+            
+            <!-- Tarjeta 1: Ceremonia Religiosa -->
+            <div class="flip-card" tabindex="0">
+                <div class="flip-card-inner">
+                    <!-- Frente -->
+                    <div class="flip-card-front">
+                        <div class="event-icon">⛪</div>
+                        <h3>Ceremonia Religiosa</h3>
+                        <p class="front-subtext">Click / Toca para voltear</p>
+                        <span class="rotate-badge">🔄 Giro 180°</span>
+                    </div>
+                    <!-- Reverso (Escondido) -->
+                    <div class="flip-card-back">
+                        <h3>Ceremonia Religiosa</h3>
+                        <p class="event-date">Sábado, 18 de Octubre, 2026</p>
+                        <p class="event-time">⏱ 16:00 HRS</p>
+                        <div class="event-location">
+                            <strong>Parroquia de San Francisco de Asís</strong>
+                            <p>San Salvador 221, San Vicente, 25023 Saltillo, Coah.</p>
+                        </div>
+                        <a href="https://www.google.com/maps/place/San+Salvador+221,+San+Vicente,+25023+Saltillo,+Coah./@25.4064787,-100.9781659,17z/data=!3m1!4b1!4m6!3m5!1s0x86880d3225446747:0xb39f956e395e96eb!8m2!3d25.4064787!4d-100.975591!16s%2Fg%2F11crvkmrhr?entry=ttu&g_ep=EgoyMDI2MDkxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" class="btn-map">Ver Ubicación en Mapa</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2: Recepción & Fiesta -->
+            <div class="flip-card" tabindex="0">
+                <div class="flip-card-inner">
+                    <!-- Frente -->
+                    <div class="flip-card-front highlight">
+                        <div class="event-icon">🥂</div>
+                        <h3>Recepción & Fiesta</h3>
+                        <p class="front-subtext">Click / Toca para voltear</p>
+                        <span class="rotate-badge">🔄 Giro 180°</span>
+                    </div>
+                    <!-- Reverso (Escondido) -->
+                    <div class="flip-card-back highlight-back">
+                        <h3>Recepción & Fiesta</h3>
+                        <p class="event-date">Sábado, 18 de Octubre, 2026</p>
+                        <p class="event-time">⏱ 19:00 HRS</p>
+                        <div class="event-location">
+                            <strong>Hacienda Las Isabeles</strong>
+                            <p>San Salvador 221, San Vicente, 25023 Saltillo, Coah.</p>
+                        </div>
+                        <a href="https://www.google.com/maps/place/San+Salvador+221,+San+Vicente,+25023+Saltillo,+Coah./@25.4064787,-100.9781659,17z/data=!3m1!4b1!4m6!3m5!1s0x86880d3225446747:0xb39f956e395e96eb!8m2!3d25.4064787!4d-100.975591!16s%2Fg%2F11crvkmrhr?entry=ttu&g_ep=EgoyMDI2MDkxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" class="btn-map">Ver Ubicación en Mapa</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Código de Vestimenta -->
+    <section class="dresscode-section">
+        <div class="dresscode-card">
+            <div class="icon">✨</div>
+            <h2>Código de Vestimenta</h2>
+            <p class="dresscode-type">Rigurosa Etiqueta / Formal</p>
+            <p class="dresscode-note">Nos encantaría verte lucir elegante. Sugerimos vestido largo para las damas y traje oscuro o smoking para los caballeros.</p>
+            <span class="color-note">Reservamos el color blanco para la novia ♡</span>
+        </div>
+    </section>
+
+    <!-- Confirmación de Asistencia -->
+    <section class="rsvp-section">
+        <div class="rsvp-content">
+            <h2>¿Nos Acompañas?</h2>
+            <p>Por favor confirma tu asistencia antes del 15 de Septiembre para organizar cada detalle con cariño.</p>
+            <a href="https://wa.me/528714712604?text=¡Hola!%20Confirmo%20mi%20asistencia%20a%20la%20boda%20de%20Diego%20y%20Alma.%20" 
+               target="_blank" 
+               rel="noopener" 
+               class="btn-whatsapp-rsvp">
+                <svg viewBox="0 0 32 32" class="wa-icon"><path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 8.138-2.132c2.373 1.298 5.050 1.98 7.862 1.98 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.35c-2.427 0-4.808-0.652-6.895-1.887l-0.495-0.293-5.132 1.346 1.37-5.002-0.322-0.513c-1.353-2.155-2.068-4.662-2.068-7.221 0-7.521 6.119-13.64 13.64-13.64s13.64 6.119 13.64 13.64-6.119 13.64-13.64 13.64zM22.784 19.851c-0.372-0.186-2.203-1.087-2.544-1.211-0.341-0.124-0.589-0.186-0.837 0.186s-0.961 1.211-1.178 1.459c-0.217 0.248-0.434 0.279-0.806 0.093-0.372-0.186-1.57-0.579-2.991-1.847-1.106-0.986-1.853-2.204-2.07-2.576s-0.023-0.573 0.163-0.758c0.168-0.167 0.372-0.434 0.558-0.651s0.248-0.372 0.372-0.62c0.124-0.248 0.062-0.465-0.031-0.651s-0.837-2.016-1.147-2.762c-0.302-0.727-0.61-0.628-0.837-0.64-0.217-0.011-0.465-0.013-0.713-0.013s-0.651 0.093-0.992 0.465c-0.341 0.372-1.302 1.271-1.302 3.101s1.333 3.602 1.519 3.85c0.186 0.248 2.624 4.007 6.359 5.619 0.888 0.384 1.581 0.613 2.122 0.785 0.892 0.283 1.704 0.243 2.346 0.147 0.716-0.107 2.203-0.901 2.513-1.769s0.31-1.612 0.217-1.769c-0.093-0.155-0.341-0.248-0.713-0.434z"></path></svg>
+                Confirmar por WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p class="footer-names">Diego & Alma</p>
+        <p class="footer-quote">"El amor no consiste en mirarse el uno al otro, sino en mirar juntos en la misma dirección."</p>
+    </footer>
+
+</body>
+</html>

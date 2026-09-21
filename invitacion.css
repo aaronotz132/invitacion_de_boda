@@ -1,0 +1,410 @@
+/* ==========================================================================
+   RESET & VARIABLES
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-main: #FAF8F5;
+    --bg-card: #FFFFFF;
+    --primary: #C5A059;
+    --primary-dark: #A3803C;
+    --text-dark: #333333;
+    --text-muted: #777777;
+    --font-script: 'Alex Brush', cursive;
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-sans: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* HERO / COVER */
+.invitation-hero {
+    position: relative;
+    height: 70vh;
+    min-height: 450px;
+    background: url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: #FFFFFF;
+    padding: 0 20px;
+}
+
+.hero-content .subtitle {
+    font-family: var(--font-serif);
+    font-size: 5.1rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.hero-content .names {
+    font-family: var(--font-script);
+    font-size: 4.8rem;
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 15px;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.date-badge {
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 8px 15px;
+    display: inline-block;
+}
+
+/* FOTO DE LA PAREJA */
+.couple-photo-section {
+    margin-top: -60px;
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+}
+
+.photo-frame {
+    max-width: 450px;
+    margin: 0 auto;
+    border-radius: 200px 200px 15px 15px;
+    overflow: hidden;
+    border: 8px solid #556B2F;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.couple-img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    display: block;
+}
+
+/* NUESTRA HISTORIA */
+.story-section {
+    max-width: 650px;
+    margin: 60px auto 50px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-family: var(--font-serif);
+    font-size: 4.5rem;
+    font-weight: 400;
+    color: var(--text-dark);
+}
+
+.divider {
+    color: var(--primary);
+    font-size: 1.2rem;
+    margin: 10px 0 20px 0;
+}
+
+.story-text {
+    font-family: var(--font-serif);
+    font-size: 1.50rem;
+    font-style: italic;
+    color: #555555;
+    line-height: 1.8;
+}
+
+/* EVENTOS CON EFECTO FLIP (GIRO 180°) */
+.events-section {
+    padding: 60px 20px;
+    background-color: #556B2F;
+}/* Cambiar solo el título de la sección Dónde & Cuándo a color blanco */
+.events-section .section-title {
+    color: #FFFFFF;
+}
+
+/* Opcional: Si también quieres que la frase instructiva "Toca o pasa el cursor..." sea blanca */
+.events-section .flip-hint {
+    color: #FFFFFF;
+}
+
+.flip-hint {
+    font-size: 0.85rem;
+    color: #e5e5e5;
+    margin-top: 5px;
+}
+
+.events-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    max-width: 900px;
+    margin: 40px auto 0 auto;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 380px;
+    height: 380px;
+    perspective: 1000px;
+    outline: none;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+/* Giro al pasar el cursor o al presionar / enfocar */
+.flip-card:hover .flip-card-inner,
+.flip-card:focus .flip-card-inner,
+.flip-card:active .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    padding: 35px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    border: 1px solid rgba(197, 160, 89, 0.3);
+}
+
+.flip-card-front {
+    background-color: var(--bg-card);
+}
+
+.flip-card-front h3 {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    color: var(--primary);
+    margin: 15px 0 10px 0;
+}
+
+.front-subtext {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.rotate-badge {
+    margin-top: 25px;
+    font-size: 0.8rem;
+    padding: 6px 14px;
+    background: #FAF8F5;
+    border-radius: 20px;
+    color: var(--primary-dark);
+    font-weight: 500;
+}
+
+.flip-card-back {
+    background-color: var(--bg-card);
+    transform: rotateY(180deg);
+}
+
+.flip-card-back h3 {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.event-icon {
+    font-size: 2.5rem;
+}
+
+.event-date {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.event-time {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+.event-location {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.btn-map {
+    display: inline-block;
+    padding: 10px 22px;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-map:hover {
+    background-color: var(--primary);
+    color: #FFFFFF;
+}
+
+/* CÓDIGO DE VESTIMENTA */
+.dresscode-section {
+    padding: 70px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.dresscode-card {
+    background: #556B2F;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+}
+
+.dresscode-card .icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.dresscode-card h2 {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.dresscode-type {
+    font-weight: 600;
+    color: var(--primary);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.dresscode-note {
+    font-size: 0.95rem;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+.color-note {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #FFFFFF;
+}
+
+/* RSVP / WHATSAPP */
+.rsvp-section {
+    padding: 70px 20px;
+    background-color: #EFE8DE;
+}
+
+.rsvp-content {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.rsvp-content h2 {
+    font-family: var(--font-serif);
+    font-size: 2.3rem;
+    margin-bottom: 15px;
+}
+
+.rsvp-content p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.btn-whatsapp-rsvp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #556B2F;
+    color: #FFFFFF;
+    padding: 15px 32px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-whatsapp-rsvp:hover {
+    background-color: #252f14;
+    transform: translateY(-2px);
+}
+
+.wa-icon {
+    width: 22px;
+    height: 22px;
+    fill: #FFFFFF;
+}
+
+/* FOOTER */
+footer {
+    background-color: #1F1F1F;
+    color: #FFFFFF;
+    padding: 50px 20px;
+}
+
+.footer-names {
+    font-family: var(--font-script);
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.footer-quote {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #AAAAAA;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .hero-content .names {
+        font-size: 3.5rem;
+    }
+    .couple-img {
+        height: 380px;
+    }
+    .flip-card {
+        width: 100%;
+        height: 360px;
+    }
+}
